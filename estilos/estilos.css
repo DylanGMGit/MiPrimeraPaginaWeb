@@ -1,0 +1,12 @@
+h1 {
+    font-size: 3rem;
+    background-color: black;
+    transition: all 0.8s ease-in;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 450px) {e
+}

@@ -11,7 +11,7 @@
     height: 85vh;
     border-radius: 2rem;
     border: 2px solid rgba(255, 255, 255, 0.319);
-
+    box-shadow: 0px 0px 90px 5px #323232;
     backdrop-filter: blur(10px);
 }
 
@@ -33,7 +33,15 @@ iframe {
 }
 
 h4 {
-text-align: center;
+    text-align: center;
+    color: black;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.estadisticas {
+    font-size: medium;
+    color: black;
 }
 
 @media(max-width:991px) {

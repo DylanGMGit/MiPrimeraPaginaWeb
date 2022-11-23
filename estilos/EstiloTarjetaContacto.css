@@ -44,8 +44,36 @@ h4 {
     color: black;
 }
 
+a {
+    transition: all 0.2s ease-in-out;
+}
+
+.divBotones button {
+    padding: 0.6rem 0;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+a:hover {
+    transform: scale(1.2);
+}
+
 @media(max-width:991px) {
     .modal-body {
         height: 80vh;
+    }
+
+    .content {
+        height: 95vh;
+    }
+
+    #botonMensaje {
+
+        margin-bottom: 0.8rem;
+    }
+
+    .divBotones {
+        margin-top: 1.1rem !important;
     }
 }

@@ -16,6 +16,7 @@
 
   <title>Tarjeta de Contacto</title>
   <link href="estilos/EstiloTarjetaContacto.css" rel="stylesheet" />
+  <script src="logicas/logicTarjetaContacto.js"></script>
 </head>
 
 <body class="text-light">
@@ -60,8 +61,8 @@
           </div>
         </div>
         <div class="divBotones col-lg-10 col-12 d-flex flex-wrap justify-content-around mt-5">
-          <button class="btn btn-primary col-lg-5 col-10" id="botonMensaje">Send Message</button>
-          <button class="btn btn-primary col-lg-5 col-10">Follow Me</button>
+          <button class="btn btn-primary col-lg-5 col-10" id="botonMensaje" onclick="mandarCorreo()">Send Message</button>
+          <button class="btn btn-primary col-lg-5 col-10" onclick="seguirInstagram()">Follow Me</button>
         </div>
       </div>
     </div>

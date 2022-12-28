@@ -53,6 +53,28 @@ a {
     font-size: 1.3rem;
     border-radius: 2rem;
     font-weight: 500;
+    background: linear-gradient(#3a63d5, #d53a9d);
+    border: transparent;
+    position: relative;
+}
+
+.divBotones button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: linear-gradient(45deg, #743ad5, #e727a1);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.divBotones button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
 
 a:hover {

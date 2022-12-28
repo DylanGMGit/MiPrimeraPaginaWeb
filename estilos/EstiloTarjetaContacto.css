@@ -98,4 +98,8 @@ a:hover {
     .divBotones {
         margin-top: 1.1rem !important;
     }
+
+    #fotoPerfil {
+        width: 60% !important;
+    }
 }

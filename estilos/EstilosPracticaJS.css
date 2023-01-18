@@ -1,0 +1,50 @@
+* {
+    background-color: rgb(235, 235, 235);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+code {
+    background-color: black;
+    font-style: italic;
+    color: rgb(0, 255, 13);
+    font-weight: bolder;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    width: fit-content;
+    max-width: 90%;
+    text-align: start;
+}
+
+.content {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.content div {
+    margin-bottom: 2rem;
+    width: 80%;
+    text-align: justify;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>El título de mi página</title>
+    <link rel="stylesheet" href="estilos/EstilosPracticaJS.css" />
+</head>
+
+<body>
+    <div class="content">
+        <!-- HEADER -->
+        <h1 id="tituloIntroduccion"></h1>
+
+        <!-- DOM CONTAINER -->
+        <div class="domContainer">
+            <h2>1) ¿QUÉ ES EL DOM?</h2>
+            <p>DOM significa:
+            <ul>
+                <li><b>D</b>ocument </li>
+                <li><b>O</b>bject </li>
+                <li><b>M</b>odel</p>
+                </li>
+            </ul>
+            <p> Básicamente el DOM es el manejo del HTML desde la parte de JavaScript <i>(h1, h2, p, div, etc...)</i>
+                llamados / manjeados desde el JS</p>
+        </div>
+
+        <!-- VINCULAR JAVASCRIPT CONTAINER -->
+        <div class="vincularJSContainer">
+            <h2>2) ¿CÓMO VINCULAR JS CON HTML?</h2>
+            <p>Para poder vincular JS con HTML, es necesario escribir en el
+                <code>&lt;head&gt; &lt;/head&gt;</code>
+                la siguiente línea: <code>&lt;script src="myscripts.js"&gt;&lt;/script&gt;</code>
+            </p>
+        </div>
+
+        <!-- VINCULAR ELEMENTO DOM -->
+        <div class="vincularElementoDOMContainer">
+            <h2>3) ¿CÓMO VINCULAR UN ELEMENTO DEL DOM?</h2>
+            <p>Por ejemplo, para poder acceder al título header de esta página, primeramente deberíamos colocar al
+                elemento en HTML el
+                'ID' que deseemos:
+                <code>&lt;h1 id="tituloIntroduccion"&gt; INTRODUCCIÓN A JAVASCRIPT &lt;/h1&gt;</code>
+            </p>
+            <p>Por último, simplemente tendríamos que buscar el ID (colocado anteriormente) en el JS y meterlo en una
+                variable:
+                <code>var tituloIntroduccion = document.getElementById('tituloIntroduccion')</code>
+            </p>
+
+        </div>
+
+        <!-- OBTENER TEXTO ELEMENTO DOM -->
+        <div class="obtenerTextoDOMContainer">
+            <h2>4) ¿CÓMO OBTENER EL TEXTO DE UN ELEMENTO DEL DOM?</h2>
+            <p>Una vez que ya tenemos vinculado nuestro elemento, queremos acceder a su texto para poder visualizarlo.
+                Para ello, es tan simple como acceder a la propiedad <b>textContent</b> del elemento.
+                <code>var tituloIntroduccionTexto = tituloIntroduccion.textContent
+                    <br><br>alert('El título de la página es: ' + tituloIntroduccionTexto)
+                </code>
+            </p>
+        </div>
+
+        <!-- OBTENER LOGINTUD TEXTO DOM -->
+        <div class="obtenerLongitudTextoDOMContainer">
+            <h2>5) ¿CÓMO OBTENER LA LONGITUD DE UN TEXTO?</h2>
+            <p>Simplemente hay que acceder a la propiedad <b>length</b> del elemento que queremos averiguar su longitud:
+                <code>var tituloIntroduccionTexto = tituloIntroduccion.textContent
+                    <br><br>alert('La longitud del título es: ' + tituloIntroduccionTexto.length)
+                </code>
+            </p>
+            <h4>* Textos vacíos</h4>
+            <p>Un texto en JAVASCRIPT esta vacío cuanto tiene 0 bits de información. Los espacios en blanco, cuentan
+                como info.
+            <pre><code>
+    if (tituloIntroduccionTexto === '') {
+        alert('VACÍO')
+    } else {
+        alert('TIENE INFO')
+    }
+            </code></pre>
+            </p>
+
+        </div>
+    </div>
+    <script src="logicas/logicPracticaJS.js"></script>
+</body>
+
+</html>

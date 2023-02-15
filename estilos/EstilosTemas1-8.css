@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.content {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h1 {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.ej1, .ej2 {
+    background-color: black;
+    width: 80%;
+    padding: 0 2rem;
+    text-align: justify;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ej1 *, .ej2 * {
+    color: rgb(0, 186, 0)
+}
+
+.solucion {
+    margin: 1rem 0;
+    background-color: rgb(58, 58, 58);
+    border-radius: 1rem;
+    padding: 0.2rem 1.5rem;
+}
+
+.solucion button {
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: green;
+    transition: transform 0.2s ease;
+}
+
+.solucion button:hover {
+    transform: scale(1.1);
+}
+
+.ej2 .solucion {
+    padding: 0rem 1.5rem 1rem 1.5rem;
+}
+
+.solucion ul {
+    margin: 0;
+    padding: 1rem;
+}
+
+

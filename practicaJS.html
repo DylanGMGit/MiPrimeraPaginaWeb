@@ -6,12 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>El título de mi página</title>
     <link rel="stylesheet" href="estilos/EstilosPracticaJS.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="introduccion.html">Introduccion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Colores.html">Colores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Textos.html">Textos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PenitenciariaYoutubers.html">Penitenciaria Youtubers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TarjetaContacto.html">Tarjeta de Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Libreta JS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="content">
         <!-- HEADER -->
-        <h1 id="tituloIntroduccion"></h1>
+        <h1 id="tituloIntroduccion">LIBRETA APUNTES JS</h1>
 
         <!-- DOM CONTAINER -->
         <div class="domContainer">
@@ -83,8 +119,144 @@
             </p>
 
         </div>
+
+        <!-- OBTENER CARACTER DOM -->
+        <div class="obtenerCaracterTextoDOMContainer">
+            <h2>6) ¿CÓMO OBTENER EL CARACTER EN UNA POSICIÓN DE UN TEXTO?</h2>
+            <p>Simplemente hay que acceder a la propiedad <b>charAt()</b> del texto del cual queremos extraer un
+                carácter. Entre los '()' colocaremos el iterador (posición) del carácter a buscar.
+                <code>var segundoCaracter = tituloIntroduccionTexto.charAt(2)
+                    <br><br>
+                    console.log(segundoCaracter)
+                </code>
+            </p>
+        </div>
+
+        <!-- ESCRIBIR UN PARRAFO DOM -->
+        <div class="escribirParrafoDOMContainer">
+            <h2>7) ¿CÓMO PLASMAR INFORMACIÓN EN UN PÁRRAFO?</h2>
+            <p id="miPrimerParrafoDinamico">MI TEXTO</p>
+            <button onclick="escribirParrafo()">RELLENAR PARRAFO</button>
+            <p>Para poder rellenar dinámicamente un párrafo, es necesario seguir los siguientes pasos:</p>
+            <ol>
+                <li>Establecer un identifier al párrafo / elemento al que se quiera
+                    atacar.
+                    <code>&lt;p id="miPrimerParrafoDinamico"&gt;</p></code>
+                </li>
+                <li>Para poder trabajar con el DOM, guardamos ese componente en una variable de JS:
+                    <code>var miPrimerParrafoDinamico = document.getElementById('miPrimerParrafoDinamico')</code>
+                </li>
+                <li>
+                    Desde el JS, utilizar el componente guardado para llamar al innerHTML:
+                    <code>miPrimerParrafoDinamico.innerHTML = 'MI PRIMER TEXTO EN UN PÁRRAFO DINÁMICO'</code>
+                </li>
+            </ol>
+            <p style="margin-top: 3rem"><span style="background-color: yellow; 
+                    color: black; 
+                    font-weight: bolder; 
+                    font-style: italic">NOTA:</span>
+                Para no
+                sobreescribir el
+                texto del párrafo (y simular un APPEND), utilizaremos el <b>innerHTML</b>
+                de la siguiente manera:
+                <code>
+                miPrimerParrafoDinamico.innerHTML += ' MI PRIMER TEXTO SIN SOBREESCRIBIR'
+            </code>
+            </p>
+        </div>
+
+        <!-- ANYADIR ELEMENTOS NO EXISTENTES AL DOM -->
+        <div class="anyadirElementosNoExistentesEnDOMContainer">
+            <h2>8) ¿CÓMO AÑADIR ELEMENTOS QUE NO EXISTEN INICIALMENTE EN EL DOM?</h2>
+            <button onclick="anyadirElemento()">AÑADIR ELEMENTO</button>
+            <ol id="miPrimeraListaDinamica">
+            </ol>
+            <p>En este caso, añadiremos elementos <b>li</b> a un <b>ol (o ul)</b> ya existente en el dom. Para ello,
+                seguiremos los siguientes pasos:</p>
+            <ol>
+                <li>Establecer un identifier a la lista a la que queremos atacar.
+                    <code>&lt;ol id="miPrimeraListaDinamica"&gt;&lt;/ol&gt;</p></code>
+                </li>
+                <li>Para poder trabajar con el DOM, guardamos ese componente en una variable de JS:
+                    <code>var miPrimeraListaDinamica = document.getElementById('miPrimeraListaDinamica')</code>
+                </li>
+                <li>Crear un elemento "plantilla" <b>li</b> mediante el <b>document.createElement()</b>, el cual
+                    añadiremos futuramente a la lista:
+                    <code>var miElementoLi = document.createElement("li");</code>
+                </li>
+                <li>Personalizar con texto el elemento <b>li</b> previamente creado. Para ello, usaremos el
+                    <b>document.createTextNode()</b>
+                    <code>miElementoLi.appendChild(document.createTextNode('Nuevo Elemento de la Lista'))</code>
+                </li>
+                <li>Añadir a nuestra lista (ol) inicial el elemento <b>li</b> previamente creado y personalizado con
+                    texto. Usaremos el <b>appendChild()</b>
+                    <code> miPrimeraListaDinamica.appendChild(miElementoLi)</code>
+                </li>
+
+            </ol>
+
+            <button style="margin-top: 5rem" onclick="convierteParrafo()">CONVIERTE EL PARRAFO</button>
+            <p id="miParrafoClaseDinamica">UN TEXTO CURIOSO</p>
+        </div>
+
+        <!-- REPASO DE LO APRENDIDO -->
+        <div class="anyadirElementosNoExistentesEnDOMContainer">
+            <h2>** EJERCICIOS DE REPASO TEMAS 1-8</h2>
+            <p>Para acceder a los ejercicios de repaso de los temas 1-8, presionar el siguiente botón:</p>
+            <button data-bs-toggle="modal" data-bs-target="#exampleModal">VER EJERCICIOS</button>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">REPASO TEMAS 1-8</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ej1">
+                        <h2>Ejercicio 1)</h2>
+                        <h3>Tienes un párrafo con un texto predefinido. Seguidamente, se sitúa un botón con la
+                            funcionalidad de
+                            clonar el texto de este párrafo a uno que haya en la siguente línea. <b>No te olvides de
+                                darle un estilo
+                                estético a tu web</b></h3>
+                        <div class="solucion">
+                            <p id="parrafoClonar">Este es mi párrafo a clonar</p>
+                            <button onclick="clonarParrafo()">CLONACIÓN!</button>
+                            <p id="parrafoClonado"></p>
+                        </div>
+                    </div>
+
+                    <div class="ej2">
+                        <h2>Ejercicio 2)</h2>
+                        <h3>Tienes una lista de 3 elementos. La intención es que, al presionar el botón, se añada un
+                            nuevo elemento.
+                            <b>No te olvides de darle un estilo
+                                estético a tu web</b>
+                        </h3>
+                        <div class="solucion">
+                            <ul id="listaElementos">
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ul>
+                            <button onclick="elementoNuevo()">NUEVO ELEMENTO!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="logicas/logicPracticaJS.js"></script>
+    <script src="logicas/logicTemas1-8.js"></script>
+
 </body>
 
 </html>

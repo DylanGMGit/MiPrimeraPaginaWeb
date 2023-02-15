@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Repaso Temas 1-8</title>
+    <link rel="stylesheet" href="estilos/EstilosTemas1-8.css" />
+</head>
+
+<body>
+    <div class="content">
+        <h1 id="tituloIntroduccion">REPASO TEMAS 1-8</h1>
+        <div class="ej1">
+            <h2>Ejercicio 1)</h2>
+            <h3>Tienes un párrafo con un texto predefinido. Seguidamente, se sitúa un botón con la funcionalidad de
+                clonar el texto de este párrafo a uno que haya en la siguente línea. <b>No te olvides de darle un estilo
+                    estético a tu web</b></h3>
+            <div class="solucion">
+                <p id="parrafoClonar">Este es mi párrafo a clonar</p>
+                <button onclick="clonarParrafo()">CLONACIÓN!</button>
+                <p id="parrafoClonado"></p>
+            </div>
+        </div>
+
+        <div class="ej2">
+            <h2>Ejercicio 2)</h2>
+            <h3>Tienes una lista de 3 elementos. La intención es que, al presionar el botón, se añada un nuevo elemento.
+                <b>No te olvides de darle un estilo
+                    estético a tu web</b>
+            </h3>
+            <div class="solucion">
+                <ul id="listaElementos">
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                </ul>
+                <button onclick="elementoNuevo()">NUEVO ELEMENTO!</button>
+            </div>
+        </div>
+    </div>
+    <script src="logicas/logicTemas1-8.js"></script>
+</body>
+
+</html>
